@@ -1,0 +1,262 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Sofia Sans", sans-serif;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+}
+.logo{
+    width: 120px;
+}
+.list-items{
+    display: inline;
+    list-style: none;
+    margin: 0px 20px;
+}
+.links{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+.links:hover{
+    text-decoration: underline;
+    color: red;
+}
+.home-contents{
+    margin: 13% 0px 0px 8%;
+}
+#name{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+#flname{
+    color: blue;
+}
+#user-details{
+    line-height: 1.2;
+}
+#download{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    /* to show box below line other wise paddinga nd margin won't work since a is inline */
+    display: inline-block;
+    padding: 10px;
+    margin-top: 30px;
+}
+.home-images{
+    /*to show one image below other decrease the width of div  */
+    width:45%;
+    /* to set height of images as same first decrease height of div and later for image tag set 100 height */
+    height: 75%;
+    /* to show images on right position proerty has to introduce to place it from right  and to make it up bottom 0px*/
+    position: absolute;
+    /* here no change  in position ince brower adjust div position according to its size */
+    right: 30px;
+    bottom: 0px;
+}
+.group1{
+    height: 100%;
+    /* one above other */
+    position: absolute;
+    /* to move according to initial value set bottom and left values and them freeze showing chnage in broswer but on hovering it should change  position*/
+    bottom: 0px;
+    left: 50%;
+    /* observe change without  transform property */
+    transform: translate(-50%);
+    /* to create transitions smoothly we can set timing */
+    transition: bottom 5s,left 3s;
+    
+}
+.home-images:hover #shape{
+    bottom: 70px;
+
+}
+.home-images:hover #girl{
+    left: 40%;
+}
+#about{
+    margin: 15% 8% 0px 8%;
+
+}
+.section-head{
+    text-align: center;
+}
+.about-head{
+    font-size: 30px;
+}
+.subhead{
+    font-size: 20px;
+    color: blue;
+}
+.section-about{
+    /* display: flex; */
+    display: grid;
+    margin-top: 20px;
+    /* align-items: center; */
+    /* grid-template-columns: auto auto; */
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    
+}
+
+.about-image>img{
+    width: 350px;
+}
+.about-contents{
+    font-size: 18px;
+    /* equal line lenghthon each line */
+    text-align: justify;
+}
+.information{
+    margin-top: 1rem;
+}
+.info-box{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+/* space between icon and span */
+.info-box>span{
+ margin-left: 1rem;
+}
+.skills{
+    margin: 10% 8% 0px 8%;
+}
+.skill-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 20px;
+    align-items: center;
+    margin-left: 30px;
+    gap: 5rem;
+    margin-right: 0px;
+}
+.skill-img{
+    width: 100%;
+}
+.bars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem 0px;
+
+}
+.bar-head,.bar-percent{
+ font-weight: 500;
+ font-size: 1.1rem;
+}
+/* note that two div have same class name so will applied to both bars */
+.base-bar{
+    background-color: black;
+    height: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    /* bur after this bar will be on html and percent div so to move it to below set margin bottom as 0px */
+    bottom: 0px;
+}
+.html-bar{
+    background-color: orange;
+    width: 90%;
+}
+.css-bar{
+    background-color: orange;
+    width: 85%;
+}
+.js-bar{
+    background-color: orange;
+    width: 89%;
+}
+.react-bar{
+    background-color: orange;
+    width: 60%;
+}
+#contact{
+    margin: 8%;
+}
+.icon-collection{
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+    
+   
+}
+.icon:hover{
+    background-image: linear-gradient(red, yellow, blue);
+}
+.brands{
+    color: black;
+    font-size: 30px;
+    
+    
+}
+.icon:hover .brands{
+    color: white;
+    animation: rotate 3s;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(30deg);
+    }
+    20%{
+        transform: rotate(-30deg);
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+    }
+    80%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
+}
+#copyright{
+    text-align: center;
+    font-weight: 600;
+}
+.up-arrow{
+    float: right;
+    margin: -40px 30px 30px 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius:10px ;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(0, 251, 255);
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+}
+
